@@ -126,43 +126,63 @@ ________________________________________________________________________________
 Frontend
 Streamlit (API consumer only)
 _____________________________________________________________________________________________________________________________________________________________________________
-''' text
- FinWiser.AI/
+## 📂 Project Structure
+
+```text
+FinWiser.AI/
 │
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
-├── .env
-├── app.py # Streamlit UI (API client)
-├── test_rag.py # Local RAG testing
+├── run.py
 │
 ├── data/
-│ ├── sec_filings.csv # Kaggle metadata
-│ └── filings_text/ # Downloaded filing text (generated)
+│   ├── sec_metadata.csv        # Kaggle dataset
+│   └── filings_text/           # Downloaded SEC filings text (generated, ignored)
+│
+├── notebooks/
+│   ├── 01_dataset_exploration.ipynb
+│   ├── 02_chunking_validation.ipynb
+│   └── 03_rag_testing.ipynb
 │
 ├── src/
-│ ├── agents/
-│ │ └── qa_agent.py
-│ │
-│ ├── api/
-│ │ └── main.py # FastAPI app (/ask)
-│ │
-│ ├── ingestion/
-│ │ └── fetch_filings.py
-│ │
-│ ├── preprocessing/
-│ │ └── chunking.py
-│ │
-│ ├── rag/
-│ │ ├── embeddings.py
-│ │ ├── vector_store.py
-│ │ ├── retriever.py
-│ │ └── test.py
-│ │
-│ └── pipeline/
-│ └── rag_pipeline.py
+│   ├── __init__.py
+│   │
+│   ├── config/
+│   │   ├── settings.py
+│   │   └── prompts.py
+│   │
+│   ├── ingestion/
+│   │   └── fetch_filings.py
+│   │
+│   ├── preprocessing/
+│   │   └── chunking.py
+│   │
+│   ├── rag/
+│   │   ├── embeddings.py
+│   │   ├── vector_store.py
+│   │   └── retriever.py
+│   │
+│   ├── agents/
+│   │   ├── qa_agent.py
+│   │   └── verifier_agent.py
+│   │
+│   ├── pipeline/
+│   │   └── rag_pipeline.py
+│   │
+│   └── api/
+│       └── app.py
+│
+├── streamlit_app/
+│   └── app.py
+│
+├── eval/
+│   ├── evaluation_notes.md
+│   └── sample_outputs.md
 │
 └── logs/
+    └── app.log
+
 _____________________________________________________________________________________________________________________________________________________________________________
 📥 Data Flow Explained
 1️⃣ Input Data
