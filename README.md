@@ -1,5 +1,7 @@
 FINWISER.AI — SEC Filing Summarizer & Q&A using RAG
+```text
 * Problem Statement
+```text
 Problem:
 Enable users to query SEC 10-K / 10-Q filings and receive investor-focused answers that are:
 
