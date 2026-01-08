@@ -6,6 +6,7 @@ Enable users to query SEC 10-K / 10-Q filings and receive investor-focused answe
 Grounded strictly in filings
 Transparent with source citations
 Safe from hallucinations
+_____________________________________________________________________________________________________________________________________________________________________________
 Dataset:
 SEC Filings – Kaggle
 
