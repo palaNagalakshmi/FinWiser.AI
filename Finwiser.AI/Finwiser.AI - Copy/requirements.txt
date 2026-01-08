@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pandas
+requests
+beautifulsoup4
+python-dotenv
+sentence-transformers==2.2.2
+transformers==4.30.2
+torch
+langchain
+unstructured
+tqdm
+sentence-transformers>=2.2.2
